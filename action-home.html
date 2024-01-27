@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "apple-mobile-web-app-capable" content = "yes" />
+    <meta name = "apple-mobile-web-app-status-bar-style" content = "black" />
+    <title>login</title>
+    <!-------------------------------- FrameWork-7 ios -------------------------------->
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.min.css" />
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.colors.min.css" />
+    <!-------------------------------- Font -------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/sf-ui-display" rel="stylesheet">
+    <!-------------------------------- Css -------------------------------->
+    <link rel="stylesheet" href="style.css">
+    <!-------------------------------- Icon -------------------------------->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+</head>
+<body>
+    <div class = "statusbar-overlay"></div>
+    <div class = "panel-overlay"></div>
+    
+    <div class = "panel panel-left panel-reveal">
+       
+    </div>
+    
+    <div class = "views">
+       <div class = "view view-main">
+          <div class = "navbar">
+             <div class = "navbar-inner">
+                <div class = "left">
+                   <a href = "#" class = "link icon-only open-panel">
+                     <i class="color-primary uil uil-bars"></i>
+                   </a>
+                </div>
+                <div class = "center">
+                  <h2 class="font-bebas"><span class="color-primary font-bebas">VELO</span>BIKE</h2>
+               </div>
+             </div>
+          </div>
+          
+          <div class = "pages navbar-through toolbar-through">
+             <div data-page = "index" class = "page">
+                <div class = "page-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15545.285503842304!2d80.26422058824566!3d13.078807285150548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1706354685437!5m2!1sen!2sin" class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    
+    <script type = "text/javascript" 
+       src = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/js/framework7.min.js"></script>
+    
+    <script>
+       // here initialize the app
+       var myApp = new Framework7();
+
+       // If your using custom DOM library, then save it to $$ variable
+       var $$ = Dom7;
+
+       // Add the view
+       var mainView = myApp.addView('.view-main', {
+          
+          // enable the dynamic navbar for this view:
+          dynamicNavbar: true
+       });
+
+       //use the 'pageInit' event handler for all pages
+       $$(document).on('pageInit', function (e) {
+       
+          //get page data from event data
+          var page = e.detail.page;
+
+          if (page.name === 'blog') {
+          
+             // you will get below message in alert box when page with data-page attribute is equal to "about"
+             myApp.alert('Here its your About page');
+          }
+       })
+    </script>
+ </body>
+
+</html>
+    
