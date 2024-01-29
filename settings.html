@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "apple-mobile-web-app-capable" content = "yes" />
+    <meta name = "apple-mobile-web-app-status-bar-style" content = "black" />
+    <title>login</title>
+    <!-------------------------------- FrameWork-7 ios -------------------------------->
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.min.css" />
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.colors.min.css" />
+    <!-------------------------------- Font -------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/sf-ui-display" rel="stylesheet">
+    <!-------------------------------- Css -------------------------------->
+    <link rel="stylesheet" href="style.css">
+    <!-------------------------------- Icon -------------------------------->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+</head>
+<body>
+    <div class = "statusbar-overlay"></div>
+    <div class = "panel-overlay"></div>
+    
+    <div class = "panel panel-left panel-reveal">
+       
+    </div>
+    
+    <div class = "views">
+       <div class = "view view-main">
+          <div class = "navbar">
+             <div class = "navbar-inner">
+                <div class = "left">
+                   <a href = "action-home.html">
+                     <i class="uil uil-angle-left-b"></i>
+                   </a>
+                </div>
+                <div class = "center">
+                  <span>Settings</span>
+               </div>
+               <!-- <div class="right">
+                  <a href="payment-method.html" class="color-primary">
+                     Done
+                  </a>
+               </div> -->
+             </div>
+          </div>
+          
+          <div class = "pages navbar-through">
+             <div data-page = "index" class = "page">
+               <div class = "page-content">
+                  <div class="settings-section">
+                     <div class = "list-block media-list">
+                        <ul>
+                           <li>
+                              <a href = "#" class = "item-link item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-title-row">
+                                       <div>Card number</div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href = "#" class = "item-link item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-title-row">
+                                       <div>Refund credit</div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href = "#" class = "item-link item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-title-row">
+                                       <div>Contact us</div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href = "#" class = "item-link item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-title-row">
+                                       <div>About us</div>
+                                       <div class = "item-after"><span class="color-primary">ver 1.0.2.5</span></div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href = "#" class = "item-link item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-title-row">
+                                       <div>Terms of Service</div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href = "#" class = "item-link item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-title-row">
+                                       <div>Noticications</div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>  
+                 <div class="settings-section-2">
+                  <div class="list-block media-list">
+                     <ul>
+                        <li>
+                           <a href = "#" class = "item-link item-content">
+                              <div class = "item-inner">
+                                 <div class = "item-title-row">
+                                    <div>Log Out</div>
+                                 </div>
+                              </div>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  </div>
+               </div>
+               </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    
+    <script type = "text/javascript" 
+       src = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/js/framework7.min.js"></script>
+    
+    <script>
+       // here initialize the app
+       var myApp = new Framework7();
+
+       // If your using custom DOM library, then save it to $$ variable
+       var $$ = Dom7;
+
+       // Add the view
+       var mainView = myApp.addView('.view-main', {
+          
+          // enable the dynamic navbar for this view:
+          dynamicNavbar: true
+       });
+
+       //use the 'pageInit' event handler for all pages
+       $$(document).on('pageInit', function (e) {
+       
+          //get page data from event data
+          var page = e.detail.page;
+
+          if (page.name === 'blog') {
+          
+             // you will get below message in alert box when page with data-page attribute is equal to "about"
+             myApp.alert('Here its your About page');
+          }
+       })
+    </script>
+ </body>
+
+</html>
+    

@@ -16,6 +16,41 @@
 }
 .card {
     margin: 0;
+    box-shadow: none;
+}
+.content-block-title {
+    font-size: 10px;
+    color: #a8a8a8;
+}
+span {
+    font-size: 15px;
+}
+.h2 {
+    font-size: 25px;
+    font-weight: 100
+}
+.h1 {
+    font-size: 50px;
+}
+h1 {
+    font-size: 50px;
+}
+.list-block {
+    margin: 0;
+}
+.list-block .item-after {
+    color: #333333;
+    align-items: center;
+}
+.list-block ul {
+    font-size: 15px;
+}
+.list-block .item-inner:after {
+    background-color: transparent;
+}
+.list-block ul:before,
+.list-block ul:after {
+    background-color: transparent;
 }
 /* ------------------------------ colors ------------------------------ */
 .bg-color-primary {
@@ -27,6 +62,12 @@
 .color-white {
     color: #ffffff;
 }
+.color-gray {
+    color: #a8a8a8;
+}
+.color-gray-2 {
+    color: #cdcdcd;
+}
 .color-secondary {
     color: rgba(255,178,102,1);
 }
@@ -34,10 +75,16 @@
 .button {
     border: 1px solid #ff3333;
     background-color: #ff3333;
-    color: #ffffff;                                       
+    color: #ffffff;   
+    font-size: 17px;                                    
 }
 .button-radius {
     border-radius: 50px;                                          
+}
+.button-transparent {
+    border: 0;
+    background-color: transparent;
+    font-size: 18px;
 }
 .button-fb {
     border: 1px solid #336699;
@@ -47,7 +94,17 @@
     border: 1px solid #ff3333;
     background-color: #ff3333;
     color: #ffffff;
-    font-family: 'Bebas Neue', sans-serif;                                          
+    font-family: 'Bebas Neue', sans-serif;                                     
+}
+.buttons-row .button:first-child,
+.buttons-row .button:last-child {
+    border-radius: 50px;
+    margin: 0 20px;
+}
+.buttons-row .button:last-child {
+    background-color: #a8a8a8;
+    color: #434343;
+    border: 0;
 }
 .menu-button {
     border: 0;
@@ -62,10 +119,6 @@
 /* ------------------------------ navbar ------------------------------ */
 .navbar:after {
     background-color: #ffffff;
-}
-/* ------------------------------ h1 ------------------------------ */
-h1 {
-    font-size: 50px;
 }
 /* ------------------------------ splash-screen ------------------------------ */
 .white-page-content {
@@ -122,11 +175,73 @@ form .input-bar .input-no {
     padding: 1px 6px;
     font-size: 12px;;
 }
-.row {
+.profile-menu .row {
     align-items: center;
     justify-content: space-evenly;
     padding: 15px 0;
     border-bottom: 1px solid rgba(255,178,102,1);
+}
+.action-popup-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.action-popup {
+    position: absolute;
+    content: '';
+    width: 200px;
+    bottom: 20px;
+}
+
+/* ------------------------------ inaction-home ------------------------------ */
+.pages {
+    position: relative;
+}
+.inaction-popup {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 100%;
+    background: #ffffff;
+}
+.inaction-popup .card-header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    letter-spacing: -1px;
+}
+.inaction-popup .card-content {
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+.inaction-popup .button {
+    margin: 10px 40px 20px 40px;
+}
+/* ------------------------------ camera-access ------------------------------ */
+.camera-popup {
+    position: absolute;
+    content: '';
+    width: 100%;
+    bottom: 0;
+    background: #ffffff;
+}
+.cam-img {
+    width: 200px;
+}
+.camera-popup .card-header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    letter-spacing: -1px;
+}
+.camera-popup .card .demo-card-header-pic {
+    padding: 0;
 }
 /* ------------------------------ wallet ------------------------------ */
 .wallet-section .card {
@@ -134,16 +249,102 @@ form .input-bar .input-no {
 }
 .wallet-section .card h1{
     padding: 50px 0 0 0;
+    letter-spacing: 2px;
+    font-size: 70px;
+    font-weight: 100;
 }
 .wallet-section .card p{
-    padding: 0 0 50px 0;
+    padding: 15px 0 50px 0;
+    margin: 0;
 }
-
-
-
-
-
-
+/* ------------------------------ add-new-card-section ------------------------------ */
+.demo-card-header-pic {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 25px 0;
+}
+.card-img {
+    width: 350px;
+}
+/* ------------------------------ promotion-section ------------------------------ */
+form .promo-input .promo-input-no {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 2px solid #ff3333;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 10px 10px 60px;
+    font-family: 'SF UI Display', sans-serif;
+    font-size: 15px;
+    margin: 20px 0;
+}
+form .promo-input{
+    position: relative;
+}
+form .promo-input::before{
+    position: absolute;
+    content: url(img/promo-img.png);
+    top: 11px;
+    left: 0px;
+}
+.promo-input {
+    margin: 0 20px;
+}
+.promo-input .button{
+    margin: 20px 0;
+}
+.promotion-section-2 .card-content {
+    padding: 0 12px;
+}
+.promotion-section-2 .card-footer {
+    font-size: 12px;
+}
+.promotion-section-2 .card-header {
+    font-size: 15px;
+}
+/* ------------------------------ invite-friends-section ------------------------------ */
+.if-img {
+    width: 380px;
+}
+.invite-friends-section .button {
+    margin: 40px;
+}
+.share-content {
+    font-size: 21px;
+}
+.your-promo-code {
+    font-size: 28px;
+}
+/* ------------------------------ setting-section ------------------------------ */
+.settings-section-2 {
+    margin-top: 20px;
+}
+/* ------------------------------ profile-section ------------------------------ */
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 30px;
+}
+.profile-card {
+    position: relative;
+}
+.profile-card::after {
+    position: absolute;
+    content: url(img/camera-icon.png);
+    bottom: 39px;
+    right: 35px;
+}
+.profile-section p{
+    margin-top: 0;
+}
+.profile-section .row .col{
+    margin: 0 8px;
+}
+.profile-section-2 .list-block {
+    margin: 20px 0;
+}
 
 
 
